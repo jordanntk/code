@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  yt-ems-backend:
+    build:
+      context: ./yt-ems-backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/yourdatabase
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: rootpassword
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    depends_on:
+      - db
+    volumes:
+      - ./yt-ems-backend:/app
+      - ~/.m2:/root/.m2
+
+  yt-ems-frontend:
+    build:
+      context: ./yt-ems-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - yt-ems-backend
+    volumes:
+      - ./yt-ems-frontend:/app
+      - /app/node_modules
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: yourdatabase
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
