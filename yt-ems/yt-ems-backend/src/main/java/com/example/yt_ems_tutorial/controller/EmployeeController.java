@@ -21,6 +21,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import org.apache.catalina.util.ServerInfo;
+
+
 @CrossOrigin("*")
 @RestController
 @RequestMapping("/api/employees")
@@ -62,5 +65,10 @@ public class EmployeeController {
     public ResponseEntity<String> deleteEmployee(@PathVariable("id")Long employeeId){
         employeeService.deleteEmployee(employeeId);
         return ResponseEntity.ok("Successfully deleted that nigga");
+    }
+
+    @GetMapping("/tomcat-version")
+    public String getTomcatVersion() {
+        return ServerInfo.getServerInfo();
     }
 }
