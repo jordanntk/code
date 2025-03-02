@@ -10,7 +10,7 @@ const ResultsPage = () => {
   }
   
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
+    <div>
       <h1 className="text-4xl font-bold mb-6 text-center">Your Personality Type</h1>
       
       <div className="bg-white rounded-lg shadow-lg p-6 mb-8">

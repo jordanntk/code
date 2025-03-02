@@ -1,30 +1,22 @@
 // src/pages/HomePage.jsx
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 const HomePage = () => {
+
+  const navigate = useNavigate();
+
+  const startInsomniaQuiz = () => {
+    navigate('/quiz');
+  }
+  const startStressQuiz = () => {
+    navigate('/quiz');
+  }
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 text-center">
-      <h1 className="text-4xl font-bold mb-6">Personality Quiz</h1>
-      <p className="text-xl mb-8">
-        Discover your personality type with our comprehensive questionnaire.
-        This test includes questions that will help determine your traits across 
-        multiple dimensions.
-      </p>
-      <div className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">What You'll Learn:</h2>
-        <ul className="text-left max-w-md mx-auto">
-          <li className="mb-2">• Your mind traits (Introverted vs. Extroverted)</li>
-          <li className="mb-2">• Your energy traits (Intuitive vs. Observant)</li>
-          <li className="mb-2">• Your nature traits (Thinking vs. Feeling)</li>
-          <li className="mb-2">• Your tactics traits (Judging vs. Prospecting)</li>
-        </ul>
-      </div>
-      <Link 
-        to="/quiz" 
-        className="inline-block bg-blue-600 text-white py-3 px-8 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-      >
-        Start Quiz
-      </Link>
+    <div className='justify-center items-center flex-col flex'>
+      <h1 className="text-6xl font-medium text-black p-6">Health Assessment</h1>
+      <button className='m-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={startInsomniaQuiz}>Insomnia Severity Quiz</button>
+      <button className='m-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={startStressQuiz}>Perceived Stress Quiz</button>
     </div>
   );
 };
