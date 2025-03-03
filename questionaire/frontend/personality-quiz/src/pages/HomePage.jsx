@@ -16,7 +16,7 @@ const HomePage = () => {
     <div className='flex flex-col items-center justify-center w-full max-w-3xl mx-auto px-4 pt-10'>
       {/* Text container with centered content */}
       <div className="text-center mb-4">
-        <h1 className="text-6xl font-medium bg-gradient-to-r from-blue-600 to-indigo-700 text-transparent bg-clip-text whitespace-nowrap">Health Assessment</h1>
+      <h1 className="text-4xl sm:text-5xl lg:text-7xl font-medium bg-gradient-to-r from-blue-600 to-indigo-700 text-transparent bg-clip-text">Health Assessment</h1>
         <h1 className="text-5xl font-medium text-gray-800 mt-10">건강 평가</h1>
       </div>
       

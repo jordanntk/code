@@ -5,6 +5,7 @@ import QuizPage from './pages/QuizPage';
 import ResultsPage from './pages/ResultsPage';
 import { QuizProvider } from './context/QuizContext';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
               <Route path="/results" element={<ResultsPage />} />
             </Routes>
         </div>
+        <Footer />
+
         </div>
       </QuizProvider>
       <Header /> 
