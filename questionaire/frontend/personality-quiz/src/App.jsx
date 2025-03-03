@@ -13,7 +13,7 @@ function App() {
   return (
     <BrowserRouter>
       <QuizProvider>
-        <div className='bg-gradient-to-r from-indigo-200 to-purple-100'>
+      <div className='bg-gradient-to-br from-blue-200 via-white to-indigo-100 min-h-screen'>
         <div ref={animationParent} className="flex flex-col min-h-screen items-center justify-center flex-grow">
             <Routes>
               <Route path="/" element={<HomePage />} />
