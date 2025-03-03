@@ -2,53 +2,68 @@
 const questions = [
   {
     id: 1,
-    text: "You find it difficult to introduce yourself to other people.",
+    text: "Difficulty falling asleep",
     options: [
-      { text: "Strongly Agree", value: "E1" },
-      { text: "Agree", value: "E2" },
-      { text: "Neutral", value: "N" },
-      { text: "Disagree", value: "I1" },
-      { text: "Strongly Disagree", value: "I2" }
-    ],
-    trait: "E/I" // Extraversion/Introversion
+      { text: "None", value: 0 },
+      { text: "Mild", value: 1 },
+      { text: "Moderate", value: 2 },
+      { text: "Severe", value: 3 },
+      { text: "Very Severe", value: 4 }
+    ]
   },
   {
     id: 2,
-    text: "You often get so lost in thoughts that you ignore or forget your surroundings.",
+    text: "Difficulty staying asleep",
     options: [
-      { text: "Strongly Agree", value: "N2" },
-      { text: "Agree", value: "N1" },
-      { text: "Neutral", value: "N" },
-      { text: "Disagree", value: "S1" },
-      { text: "Strongly Disagree", value: "S2" }
-    ],
-    trait: "N/S" // Intuition/Sensing
+      { text: "None", value: 0 },
+      { text: "Mild", value: 1 },
+      { text: "Moderate", value: 2 },
+      { text: "Severe", value: 3 },
+      { text: "Very Severe", value: 4 }
+    ]
   },
-  // Add more questions...
   {
     id: 3,
-    text: "You 2often get so lost in thoughts that you ignore or forget your surroundings.",
+    text: "Problems waking up too early",
     options: [
-      { text: "Strongly Agree", value: "N2" },
-      { text: "Agree", value: "N1" },
-      { text: "Neutral", value: "N" },
-      { text: "Disagree", value: "S1" },
-      { text: "Strongly Disagree", value: "S2" }
-    ],
-    trait: "N/S" // Intuition/Sensing
+      { text: "None", value: 0 },
+      { text: "Mild", value: 1 },
+      { text: "Moderate", value: 2 },
+      { text: "Severe", value: 3 },
+      { text: "Very Severe", value: 4 }
+    ]
   },
   {
     id: 4,
-    text: "You osften get so lost in thoughts that you ignore or forget your surroundings.",
+    text: "How satisfied/dissatisfied are you with your current sleep pattern?",
     options: [
-      { text: "Strongly Agree", value: "N2" },
-      { text: "Agree", value: "N1" },
-      { text: "Neutral", value: "N" },
-      { text: "Disagree", value: "S1" },
-      { text: "Strongly Disagree", value: "S2" }
-    ],
-    trait: "N/S" // Intuition/Sensing
+      { text: "Very Satisfied", value: 0 },
+      { text: "Satisfied", value: 1 },
+      { text: "Moderately Satisfied", value: 2 },
+      { text: "Dissatisfied", value: 3 },
+      { text: "Very Dissatisfied", value: 4 }
+    ]
   },
 ];
+
+// Interpretation ranges
+export const interpretScore = (score) => {
+  if (score <= 7) return { 
+    level: "No clinical insomnia", 
+    description: "You don't appear to be experiencing insomnia symptoms."
+  };
+  if (score <= 14) return { 
+    level: "Subthreshold insomnia", 
+    description: "You may be experiencing mild sleep difficulties."
+  };
+  if (score <= 21) return { 
+    level: "Clinical insomnia (moderate severity)", 
+    description: "You are experiencing moderate insomnia symptoms."
+  };
+  return { 
+    level: "Clinical insomnia (severe)", 
+    description: "You are experiencing severe insomnia symptoms."
+  };
+};
 
 export default questions;

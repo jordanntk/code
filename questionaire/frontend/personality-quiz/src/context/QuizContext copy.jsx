@@ -1,15 +1,22 @@
-import React, { createContext, useContext, useState } from 'react';
-import questions, { interpretScore } from '../data/questions';
+// src/context/QuizContext.jsx
+import { createContext, useState, useContext } from 'react';
+import questions from '../data/questions';
+import calculateResults from '../utils/calculateResults';
 
 const QuizContext = createContext();
 
+export const useQuizContext = () => useContext(QuizContext);
+
 export const QuizProvider = ({ children }) => {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
+  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [results, setResults] = useState(null);
 
   const handleAnswer = (questionId, answer) => {
-    setAnswers(prev => ({ ...prev, [questionId]: answer }));
+    setAnswers({
+      ...answers,
+      [questionId]: answer,
+    });
   };
 
   const nextQuestion = () => {
@@ -25,23 +32,13 @@ export const QuizProvider = ({ children }) => {
   };
 
   const completeQuiz = () => {
-    // Calculate the total score by summing all answer values
-    const totalScore = Object.keys(answers).reduce((sum, questionId) => {
-      return sum + answers[questionId].value;
-    }, 0);
-
-    // Get interpretation based on score
-    const interpretation = interpretScore(totalScore);
-
-    setResults({
-      score: totalScore,
-      interpretation: interpretation
-    });
+    const quizResults = calculateResults(answers);
+    setResults(quizResults);
   };
 
   const resetQuiz = () => {
-    setCurrentQuestion(0);
     setAnswers({});
+    setCurrentQuestion(0);
     setResults(null);
   };
 
@@ -56,12 +53,10 @@ export const QuizProvider = ({ children }) => {
         nextQuestion,
         prevQuestion,
         completeQuiz,
-        resetQuiz
+        resetQuiz,
       }}
     >
       {children}
     </QuizContext.Provider>
   );
 };
-
-export const useQuizContext = () => useContext(QuizContext);
