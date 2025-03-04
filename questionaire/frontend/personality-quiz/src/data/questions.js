@@ -241,4 +241,45 @@ export const interpretStressScore = (score) => {
   };
 };
 
+// Add metadata for each quiz type
+export const quizMetadata = {
+  insomnia: {
+    maxScore: 28,
+    explanation: {
+      english: "This assessment measures the severity of your insomnia symptoms. The higher the score, the more severe your symptoms may be. A score above 14 may indicate clinically significant insomnia.",
+      korean: "이 평가는 귀하의 불면증 증상의 심각도를 측정합니다. 점수가 높을수록 증상이 더 심각할 수 있습니다. 14점 이상은 임상적으로 유의한 불면증을 나타낼 수 있습니다."
+    },
+    severityRanges: [
+      { max: 7, color: 'bg-green-500' },
+      { max: 14, color: 'bg-yellow-500' },
+      { max: 21, color: 'bg-orange-500' },
+      { max: 28, color: 'bg-red-500' }
+    ],
+    severityLabels: [
+      { english: "None", korean: "없음" },
+      { english: "Mild", korean: "가벼운" },
+      { english: "Moderate", korean: "중간" },
+      { english: "Severe", korean: "심한" }
+    ],
+    },
+  
+  stress: {
+    maxScore: 40,
+    explanation: {
+      english: "This assessment measures your perceived stress levels during the past month. Higher scores indicate higher perceived stress. A score above 20 may indicate significant stress that might benefit from stress management techniques.",
+      korean: "이 평가는 지난 한 달 동안의 인지된 스트레스 수준을 측정합니다. 점수가 높을수록 인지된 스트레스가 높음을 나타냅니다. 20점 이상은 스트레스 관리 기법이 도움이 될 수 있는 상당한 스트레스를 나타낼 수 있습니다."
+    },
+    severityRanges: [
+      { max: 13, color: 'bg-green-500' },
+      { max: 26, color: 'bg-yellow-500' },
+      { max: 40, color: 'bg-red-500' }
+    ],
+    severityLabels: [
+      { english: "Low", korean: "낮음" },
+      { english: "Moderate", korean: "중간" },
+      { english: "High", korean: "높음" }
+    ],
+  }
+};
+
 export default insomniaQuestions;

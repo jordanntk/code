@@ -1,21 +1,34 @@
 // src/pages/ResultsPage.jsx
 import { Link, Navigate } from 'react-router-dom';
 import { useQuizContext } from '../context/QuizContext';
+import { quizMetadata } from '../data/questions';
 
 const ResultsPage = () => {
-  const { results, resetQuiz, getInterpretation } = useQuizContext(); // Changed useQuiz to useQuizContext, added results and resetQuiz
+  const { results, resetQuiz, quizType } = useQuizContext(); // Changed useQuiz to useQuizContext, added results and resetQuiz
 
   if (!results) {
     return <Navigate to="/" />;
   }
   
+  // // Get severity color based on score
+  // const getSeverityColor = () => {
+  //   const { score } = results;
+  //   if (score <= 7) return 'bg-green-500';
+  //   if (score <= 14) return 'bg-yellow-500';
+  //   if (score <= 21) return 'bg-orange-500';
+  //   return 'bg-red-500';
+  // };
+
+  // Get quiz-specific metadata
+  const metadata = quizMetadata[quizType];
+
   // Get severity color based on score
   const getSeverityColor = () => {
     const { score } = results;
-    if (score <= 7) return 'bg-green-500';
-    if (score <= 14) return 'bg-yellow-500';
-    if (score <= 21) return 'bg-orange-500';
-    return 'bg-red-500';
+    for (const range of metadata.severityRanges) {
+      if (score <= range.max) return range.color;
+    }
+    return metadata.severityRanges[metadata.severityRanges.length - 1].color;
   };
   
   return (
@@ -38,35 +51,34 @@ const ResultsPage = () => {
   <p className="text-lg text-gray-500">{results.interpretation.descriptionKr}</p>
 </div>
         
-        <div className="mb-8">
+<div className="mb-8">
           <h3 className="font-semibold mb-2 text-center">Severity Level</h3>
+          <h3 className="font-semibold mb-2 text-center">심각도 수준</h3>
           <div className="h-4 bg-gray-200 rounded-full overflow-hidden">
             <div 
               className={`h-full ${getSeverityColor()}`} 
-              style={{ width: `${(results.score / 28) * 100}%` }}
+              style={{ width: `${(results.score / metadata.maxScore) * 100}%` }}
             />
           </div>
           <div className="flex justify-between mt-2 text-sm">
-            <span>None</span>
-            <span>Mild</span>
-            <span>Moderate</span>
-            <span>Severe</span>
-          </div>
+  {metadata.severityLabels.map((label, index) => (
+    <span key={index} className="text-center">
+      <span className="block">{label.english}</span>
+      <span className="block text-xs text-gray-500">{label.korean}</span>
+    </span>
+  ))}
+</div>
         </div>
         
         <div className="bg-gray-50 p-4 rounded-lg">
           <h3 className="font-semibold mb-2">What does this mean?</h3>
           <p className="text-gray-700">
-            This assessment measures the severity of your insomnia symptoms. 
-            The higher the score, the more severe your symptoms may be. 
-            A score above 14 may indicate clinically significant insomnia.
+            {metadata.explanation.english}
           </p>
           <h3 className="font-semibold mb-2 mt-4">이것은 무엇을 의미합니까?</h3>
-  <p className="text-gray-700">
-    이 평가는 귀하의 불면증 증상의 심각도를 측정합니다.
-    점수가 높을수록 증상이 더 심각할 수 있습니다.
-    14점 이상은 임상적으로 유의한 불면증을 나타낼 수 있습니다.
-  </p>
+          <p className="text-gray-700">
+            {metadata.explanation.korean}
+          </p>
         </div>
       </div>
       

@@ -87,6 +87,8 @@ export const QuizProvider = ({ children }) => {
       {children}
     </QuizContext.Provider>
   );
+
+  
 };
 
 export const useQuizContext = () => useContext(QuizContext);

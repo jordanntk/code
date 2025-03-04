@@ -16,11 +16,12 @@ const HomePage = () => {
     navigate('/quiz');
   };
   return (
-    <div className='flex flex-col items-center justify-center w-full max-w-3xl mx-auto px-4 pt-10'>
+    <>
+<div className='flex flex-col items-center justify-center w-full max-w-3xl mx-auto px-4' style={{ paddingTop: '200px' }}>
       {/* Text container with centered content */}
       <div className="text-center mb-4">
       <h1 className="text-4xl sm:text-5xl lg:text-7xl font-medium bg-gradient-to-r from-blue-600 to-indigo-700 text-transparent bg-clip-text">Health Assessment</h1>
-        <h1 className="text-5xl font-medium text-gray-800 mt-10">건강 평가</h1>
+        <h1 className="text-5xl font-medium text-gray-800 mt-6 sm:mt-10">건강 평가</h1>
       </div>
       
       {/* Button container */}
@@ -66,6 +67,31 @@ const HomePage = () => {
         </a>
       </div>
     </div>
+
+        {/* ADD THIS NEW SECTION HERE - after the closing div of your existing content */}
+        <div className="w-full bg-white shadow-[0_-15px_30px_-15px_rgba(0,0,0,0.1)] mt-16">
+      <div className="max-w-4xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-medium text-gray-800 mb-6">About Our Assessments</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-xl font-medium mb-3">Insomnia Severity Index</h3>
+            <p className="text-gray-600">
+              The Insomnia Severity Index (ISI) is a brief screening measure that assesses the severity of both nighttime and daytime components of insomnia. It consists of seven questions that evaluate the severity of sleep onset, sleep maintenance, and early morning awakening problems.
+            </p>
+          </div>
+          
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-xl font-medium mb-3">Perceived Stress Scale</h3>
+            <p className="text-gray-600">
+              The Perceived Stress Scale (PSS) is one of the most widely used psychological instruments for measuring the perception of stress. It measures the degree to which situations in one's life are appraised as stressful.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </>
   );
 };
 
