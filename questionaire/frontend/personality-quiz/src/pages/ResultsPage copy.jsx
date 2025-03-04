@@ -3,8 +3,8 @@ import { Link, Navigate } from 'react-router-dom';
 import { useQuizContext } from '../context/QuizContext';
 
 const ResultsPage = () => {
-  const { results, resetQuiz, getInterpretation } = useQuizContext(); // Changed useQuiz to useQuizContext, added results and resetQuiz
-
+  const { results, resetQuiz } = useQuizContext();
+  
   if (!results) {
     return <Navigate to="/" />;
   }

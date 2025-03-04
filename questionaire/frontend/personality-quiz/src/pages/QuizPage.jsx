@@ -36,7 +36,7 @@ const QuizPage = () => {
   };
   
   return (
-    <div className="max-w-3xl mx-auto px-4 py-8 mt-10">
+    <div className="max-w-3xl mx-auto px-4 py-8 mt-16 sm:mt-20 md:mt-10">
       <ProgressBar progress={progress} />
       
       <div className="bg-white rounded-lg shadow-lg p-8 mb-8">

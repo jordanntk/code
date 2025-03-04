@@ -1,20 +1,17 @@
 // src/pages/HomePage.jsx
 import { useNavigate } from 'react-router-dom';
-import { useQuizContext } from '../context/QuizContext'; // Add this import
+
 
 const HomePage = () => {
 
   const navigate = useNavigate();
-  const { startQuiz } = useQuizContext(); // Change useQuiz to useQuizContext
 
   const startInsomniaQuiz = () => {
-    startQuiz('insomnia');
     navigate('/quiz');
-  };
+  }
   const startStressQuiz = () => {
-    startQuiz('stress');
     navigate('/quiz');
-  };
+  }
   return (
     <div className='flex flex-col items-center justify-center w-full max-w-3xl mx-auto px-4 pt-10'>
       {/* Text container with centered content */}

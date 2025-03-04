@@ -1,5 +1,5 @@
 // src/data/questions.js
-const questions = [
+export const insomniaQuestions = [
   {
     id: 1,
     text: "Difficulty falling asleep | 잠들기 어려움:",
@@ -79,8 +79,121 @@ const questions = [
   },
 ];
 
+export const stressQuestions = [
+  {
+    id: 1,
+    text: "In the last month, how often have you been upset because of something that happened unexpectedly? | 지난 한 달 동안 예상치 못한 일로 인해 얼마나 자주 화가 났습니까?",
+    options: [
+      { text: "Never | 전혀 없음", value: 0 },
+      { text: "Almost Never | 거의 없음", value: 1 },
+      { text: "Sometimes | 가끔", value: 2 },
+      { text: "Fairly Often | 꽤 자주", value: 3 },
+      { text: "Very Often | 매우 자주", value: 4 }
+    ]
+  },
+  {
+    id: 2,
+    text: "In the last monnth, how often have you felt that you were unable to control the important things in your life? | 지난 한 달 동안 중요한 일을 제어할 수 없다고 느낀 적이 얼마나 있습니까?",
+    options: [
+      { text: "Never | 전혀 없음", value: 0 },
+      { text: "Almost Never | 거의 없음", value: 1 },
+      { text: "Sometimes | 가끔", value: 2 },
+      { text: "Fairly Often | 꽤 자주", value: 3 },
+      { text: "Very Often | 매우 자주", value: 4 }
+    ]
+  },
+  {
+    id: 3,
+    text: "In the last month, how often have you felt nervous and 'stressed'? | 지난 한 달 동안 얼마나 자주 긴장되고 '스트레스'를 받았습니까?",
+    options: [
+      { text: "Never | 전혀 없음", value: 0 },
+      { text: "Almost Never | 거의 없음", value: 1 },
+      { text: "Sometimes | 가끔", value: 2 },
+      { text: "Fairly Often | 꽤 자주", value: 3 },
+      { text: "Very Often | 매우 자주", value: 4 }
+    ]
+  },
+  {
+    id: 4,
+    text: "In the last month, how often have you felt confident about your ability to handle your personal problems? | 지난 한 달 동안 개인적인 문제를 해결할 능력에 대해 얼마나 자신감을 가졌습니까?",
+    options: [
+      { text: "Never | 전혀 없음", value: 0 },
+      { text: "Almost Never | 거의 없음", value: 1 },
+      { text: "Sometimes | 가끔", value: 2 },
+      { text: "Fairly Often | 꽤 자주", value: 3 },
+      { text: "Very Often | 매우 자주", value: 4 }
+    ]
+  },
+  {
+    id: 5,
+    text: "In the last month, how often have you felt that things were going your way? | 지난 한 달 동안 일이 당신의 방향으로 흘러가고 있다고 느낀 적이 얼마나 있습니까?",
+    options: [
+      { text: "Never | 전혀 없음", value: 0 },
+      { text: "Almost Never | 거의 없음", value: 1 },
+      { text: "Sometimes | 가끔", value: 2 },
+      { text: "Fairly Often | 꽤 자주", value: 3 },
+      { text: "Very Often | 매우 자주", value: 4 }
+    ]
+  },
+  {
+    id: 6,
+    text: "In the last month, how often have you found that you could not cope with all the things that you had to do? | 지난 한 달 동안 해야 할 모든 일을 처리할 수 없다는 것을 얼마나 자주 느꼈습니까?",
+    options: [
+      { text: "Never | 전혀 없음", value: 0 },
+      { text: "Almost Never | 거의 없음", value: 1 },
+      { text: "Sometimes | 가끔", value: 2 },
+      { text: "Fairly Often | 꽤 자주", value: 3 },
+      { text: "Very Often | 매우 자주", value: 4 }
+    ]
+  },
+  {
+    id: 7,
+    text: "In the last month, how often have you been able to control irritations in your life? | 지난 한 달 동안 삶 속의 짜증을 얼마나 자주 제어할 수 있었습니까?",
+    options: [
+      { text: "Never | 전혀 없음", value: 0 },
+      { text: "Almost Never | 거의 없음", value: 1 },
+      { text: "Sometimes | 가끔", value: 2 },
+      { text: "Fairly Often | 꽤 자주", value: 3 },
+      { text: "Very Often | 매우 자주", value: 4 }
+    ]
+  },
+  {
+    id: 8,
+    text: "In the last month, how often have you felt that you were on top of things? | 지난 한 달 동안 일을 잘 처리하고 있다고 느낀 적이 얼마나 있습니까?",
+    options: [
+      { text: "Never | 전혀 없음", value: 0 },
+      { text: "Almost Never | 거의 없음", value: 1 },
+      { text: "Sometimes | 가끔", value: 2 },
+      { text: "Fairly Often | 꽤 자주", value: 3 },
+      { text: "Very Often | 매우 자주", value: 4 }
+    ]
+  },
+  {
+    id: 9,
+    text: "In the last month, how often have you been angered because of things that were outside of your control? | 지난 한 달 동안 제어할 수 없는 일로 인해 얼마나 자주 화가 났습니까?",
+    options: [
+      { text: "Never | 전혀 없음", value: 0 },
+      { text: "Almost Never | 거의 없음", value: 1 },
+      { text: "Sometimes | 가끔", value: 2 },
+      { text: "Fairly Often | 꽤 자주", value: 3 },
+      { text: "Very Often | 매우 자주", value: 4 }
+    ]
+  },
+  {
+    id: 10,
+    text: "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them? | 지난 한 달 동안 어려움이 쌓여서 극복할 수 없다고 느낀 적이 얼마나 있습니까?",
+    options: [
+      { text: "Never | 전혀 없음", value: 0 },
+      { text: "Almost Never | 거의 없음", value: 1 },
+      { text: "Sometimes | 가끔", value: 2 },
+      { text: "Fairly Often | 꽤 자주", value: 3 },
+      { text: "Very Often | 매우 자주", value: 4 }
+    ]
+  },
+];
+
 // Interpretation ranges
-export const interpretScore = (score) => {
+export const interpretInsomniaScore = (score) => {
   if (score <= 7) return { 
     level: "No clinically significant insomnia",
     levelKr: "임상적으로 유의한 불면증 없음", 
@@ -107,4 +220,25 @@ export const interpretScore = (score) => {
   };
 };
 
-export default questions;
+export const interpretStressScore = (score) => {
+  if (score <= 13) return {
+    level: "Low perceived stress",
+    levelKr: "낮은 인지된 스트레스",
+    description: "Your stress levels appear to be manageable.",
+    descriptionKr: "귀하의 스트레스 수준은 관리 가능한 것으로 보입니다."
+  };
+  if (score <= 26) return {
+    level: "Moderate perceived stress",
+    levelKr: "중간 정도의 인지된 스트레스",
+    description: "You are experiencing moderate stress levels.",
+    descriptionKr: "귀하는 중간 정도의 스트레스를 경험하고 있습니다."
+  };
+  return {
+    level: "High perceived stress",
+    levelKr: "높은 인지된 스트레스",
+    description: "You are experiencing high levels of stress.",
+    descriptionKr: "귀하는 높은 수준의 스트레스를 경험하고 있습니다."
+  };
+};
+
+export default insomniaQuestions;
