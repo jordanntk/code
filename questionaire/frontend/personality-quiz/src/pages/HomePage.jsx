@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { useQuizContext } from '../context/QuizContext'; // Add this import
 import { useEffect } from 'react';
 import comingSoon from '../assets/guinea.jpg'
-
+import melatonin from '../assets/melatonin.jpg'
+import herbs from '../assets/herbs.jpg'
 
 const HomePage = () => {
 
@@ -149,7 +150,8 @@ const HomePage = () => {
       <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1">
         <div className="h-48 bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center">
           <img 
-            src="https://placehold.co/300x200/e6effe/1d4ed8?text=Sleep+Aid" 
+            // src="https://placehold.co/300x200/e6effe/1d4ed8?text=Sleep+Aid" 
+            src={melatonin}
             alt="Sleep Aid Supplement" 
             className="max-h-full object-cover"
           />
@@ -172,7 +174,8 @@ const HomePage = () => {
       <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1">
         <div className="h-48 bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center">
           <img 
-            src="https://placehold.co/300x200/e6effe/1d4ed8?text=Stress+Relief" 
+            // src="https://placehold.co/300x200/e6effe/1d4ed8?text=Stress+Relief"
+            src={herbs} 
             alt="Stress Relief Supplement" 
             className="max-h-full object-cover"
           />
