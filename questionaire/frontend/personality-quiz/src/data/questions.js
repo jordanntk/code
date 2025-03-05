@@ -2,7 +2,10 @@
 export const insomniaQuestions = [
   {
     id: 1,
-    text: "Difficulty falling asleep | 잠들기 어려움:",
+    text: {
+      english: "Difficulty falling asleep",
+      korean: "잠들기 어려움"
+    },
     options: [
       { text: "None | 없음", value: 0 },
       { text: "Mild | 가벼운", value: 1 },
@@ -13,7 +16,10 @@ export const insomniaQuestions = [
   },
   {
     id: 2,
-    text: "Difficulty staying asleep | 계속 자는 것이 어려움:",
+    text: {
+      english: "Difficulty staying asleep",
+      korean: "계속 자는 것이 어려움"
+    },
     options: [
       { text: "None | 없음", value: 0 },
       { text: "Mild | 가벼운", value: 1 },
@@ -24,7 +30,10 @@ export const insomniaQuestions = [
   },
   {
     id: 3,
-    text: "Problems waking up too early | 너무 일찍 깨는 문제:",
+    text: {
+      english: "Problems waking up too early",
+      korean: "너무 일찍 깨는 문제"
+    },
     options: [
       { text: "None | 없음", value: 0 },
       { text: "Mild | 가벼운", value: 1 },
@@ -35,7 +44,10 @@ export const insomniaQuestions = [
   },
   {
     id: 4,
-    text: "How satisfied/dissatisfied are you with your current sleep pattern? | 현재 수면 패턴에 얼마나 만족/불만족하십니까?",
+    text: {
+      english: "How satisfied/dissatisfied are you with your current sleep pattern?",
+      korean: "현재 수면 패턴에 얼마나 만족/불만족하십니까?"
+    },
     options: [
       { text: "Very Satisfied | 매우 만족", value: 0 },
       { text: "Satisfied | 만족", value: 1 },
@@ -46,7 +58,10 @@ export const insomniaQuestions = [
   },
   {
     id: 5,
-    text: "To what extent do you consider your sleep problem to INTERFERE with your daily functioning? | 수면 문제가 일상 기능에 얼마나 방해가 된다고 생각하십니까?",
+    text: {
+      english: "To what extent do you consider your sleep problem to INTERFERE with your daily functioning?",
+      korean: "수면 문제가 일상 기능에 얼마나 방해가 된다고 생각하십니까?"
+    },
     options: [
       { text: "Not at all Interfering | 전혀 방해되지 않음", value: 0 },
       { text: "A Little | 조금", value: 1 },
@@ -57,7 +72,10 @@ export const insomniaQuestions = [
   },
   {
     id: 6,
-    text: "How NOTICEABLE to others do you think your sleep problem is? | 다른 사람들에게 당신의 수면 문제가 얼마나 눈에 띈다고 생각하십니까?",
+    text: {
+      english: "How NOTICEABLE to others do you think your sleep problem is?",
+      korean: "다른 사람들에게 당신의 수면 문제가 얼마나 눈에 띈다고 생각하십니까?"
+    },
     options: [
       { text: "Not at all Noticeable | 전혀 눈에 띄지 않음", value: 0 },
       { text: "Barely | 거의 눈에 띄지 않음", value: 1 },
@@ -68,7 +86,10 @@ export const insomniaQuestions = [
   },
   {
     id: 7,
-    text: "How WORRIED/distressed are you about your current sleep problem? | 현재 수면 문제에 대해 얼마나 걱정/스트레스를 받고 있습니까?",
+    text: {
+      english: "How WORRIED/distressed are you about your current sleep problem?",
+      korean: "현재 수면 문제에 대해 얼마나 걱정/스트레스를 받고 있습니까?"
+    },
     options: [
       { text: "Not at all | 전혀 아님", value: 0 },
       { text: "A Little | 조금", value: 1 },
@@ -82,7 +103,10 @@ export const insomniaQuestions = [
 export const stressQuestions = [
   {
     id: 1,
-    text: "In the last month, how often have you been upset because of something that happened unexpectedly? | 지난 한 달 동안 예상치 못한 일로 인해 얼마나 자주 화가 났습니까?",
+    text: {
+      english: "In the last month, how often have you been upset because of something that happened unexpectedly?",
+      korean: "지난 한 달 동안 예상치 못한 일로 인해 얼마나 자주 화가 났습니까?"
+    },
     options: [
       { text: "Never | 전혀 없음", value: 0 },
       { text: "Almost Never | 거의 없음", value: 1 },
@@ -93,7 +117,10 @@ export const stressQuestions = [
   },
   {
     id: 2,
-    text: "In the last monnth, how often have you felt that you were unable to control the important things in your life? | 지난 한 달 동안 중요한 일을 제어할 수 없다고 느낀 적이 얼마나 있습니까?",
+    text: {
+      english: "In the last month, how often have you felt that you were unable to control the important things in your life?",
+      korean: "지난 한 달 동안 중요한 일을 제어할 수 없다고 느낀 적이 얼마나 있습니까?"
+    },
     options: [
       { text: "Never | 전혀 없음", value: 0 },
       { text: "Almost Never | 거의 없음", value: 1 },
@@ -104,7 +131,10 @@ export const stressQuestions = [
   },
   {
     id: 3,
-    text: "In the last month, how often have you felt nervous and 'stressed'? | 지난 한 달 동안 얼마나 자주 긴장되고 '스트레스'를 받았습니까?",
+    text: {
+      english: "In the last month, how often have you felt nervous and 'stressed'?",
+      korean: "지난 한 달 동안 얼마나 자주 긴장되고 '스트레스'를 받았습니까?"
+    },
     options: [
       { text: "Never | 전혀 없음", value: 0 },
       { text: "Almost Never | 거의 없음", value: 1 },
@@ -115,7 +145,10 @@ export const stressQuestions = [
   },
   {
     id: 4,
-    text: "In the last month, how often have you felt confident about your ability to handle your personal problems? | 지난 한 달 동안 개인적인 문제를 해결할 능력에 대해 얼마나 자신감을 가졌습니까?",
+    text: {
+      english: "In the last month, how often have you felt confident about your ability to handle your personal problems?",
+      korean: "지난 한 달 동안 개인적인 문제를 해결할 능력에 대해 얼마나 자신감을 가졌습니까?"
+    },
     options: [
       { text: "Never | 전혀 없음", value: 0 },
       { text: "Almost Never | 거의 없음", value: 1 },
@@ -126,7 +159,10 @@ export const stressQuestions = [
   },
   {
     id: 5,
-    text: "In the last month, how often have you felt that things were going your way? | 지난 한 달 동안 일이 당신의 방향으로 흘러가고 있다고 느낀 적이 얼마나 있습니까?",
+    text: {
+      english: "In the last month, how often have you felt that things were going your way?",
+      korean: "지난 한 달 동안 일이 당신의 방향으로 흘러가고 있다고 느낀 적이 얼마나 있습니까?"
+    },
     options: [
       { text: "Never | 전혀 없음", value: 0 },
       { text: "Almost Never | 거의 없음", value: 1 },
@@ -137,7 +173,10 @@ export const stressQuestions = [
   },
   {
     id: 6,
-    text: "In the last month, how often have you found that you could not cope with all the things that you had to do? | 지난 한 달 동안 해야 할 모든 일을 처리할 수 없다는 것을 얼마나 자주 느꼈습니까?",
+    text: {
+      english: "In the last month, how often have you found that you could not cope with all the things that you had to do?",
+      korean: "지난 한 달 동안 해야 할 모든 일을 처리할 수 없다는 것을 얼마나 자주 느꼈습니까?"
+    },
     options: [
       { text: "Never | 전혀 없음", value: 0 },
       { text: "Almost Never | 거의 없음", value: 1 },
@@ -148,7 +187,10 @@ export const stressQuestions = [
   },
   {
     id: 7,
-    text: "In the last month, how often have you been able to control irritations in your life? | 지난 한 달 동안 삶 속의 짜증을 얼마나 자주 제어할 수 있었습니까?",
+    text: {
+      english: "In the last month, how often have you been able to control irritations in your life?",
+      korean: "지난 한 달 동안 삶 속의 짜증을 얼마나 자주 제어할 수 있었습니까?"
+    },
     options: [
       { text: "Never | 전혀 없음", value: 0 },
       { text: "Almost Never | 거의 없음", value: 1 },
@@ -159,7 +201,10 @@ export const stressQuestions = [
   },
   {
     id: 8,
-    text: "In the last month, how often have you felt that you were on top of things? | 지난 한 달 동안 일을 잘 처리하고 있다고 느낀 적이 얼마나 있습니까?",
+    text: {
+      english: "In the last month, how often have you felt that you were on top of things?",
+      korean: "지난 한 달 동안 일을 잘 처리하고 있다고 느낀 적이 얼마나 있습니까?"
+    },
     options: [
       { text: "Never | 전혀 없음", value: 0 },
       { text: "Almost Never | 거의 없음", value: 1 },
@@ -170,7 +215,10 @@ export const stressQuestions = [
   },
   {
     id: 9,
-    text: "In the last month, how often have you been angered because of things that were outside of your control? | 지난 한 달 동안 제어할 수 없는 일로 인해 얼마나 자주 화가 났습니까?",
+    text: {
+      english: "In the last month, how often have you been angered because of things that were outside of your control?",
+      korean: "지난 한 달 동안 제어할 수 없는 일로 인해 얼마나 자주 화가 났습니까?"
+    },
     options: [
       { text: "Never | 전혀 없음", value: 0 },
       { text: "Almost Never | 거의 없음", value: 1 },
@@ -181,7 +229,10 @@ export const stressQuestions = [
   },
   {
     id: 10,
-    text: "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them? | 지난 한 달 동안 어려움이 쌓여서 극복할 수 없다고 느낀 적이 얼마나 있습니까?",
+    text: {
+      english: "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?",
+      korean: "지난 한 달 동안 어려움이 쌓여서 극복할 수 없다고 느낀 적이 얼마나 있습니까?"
+    },
     options: [
       { text: "Never | 전혀 없음", value: 0 },
       { text: "Almost Never | 거의 없음", value: 1 },

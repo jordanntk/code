@@ -3,6 +3,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import QuizPage from './pages/QuizPage';
 import ResultsPage from './pages/ResultsPage';
+import StorePage from './pages/StorePage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import FaqPage from './pages/FaqPage';
 import { QuizProvider } from './context/QuizContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -20,6 +24,10 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/quiz" element={<QuizPage />} />
               <Route path="/results" element={<ResultsPage />} />
+              <Route path="/store" element={<StorePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/faq" element={<FaqPage />} />
             </Routes>
         </div>
         <Footer />

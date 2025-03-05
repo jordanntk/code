@@ -2,7 +2,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useQuizContext } from '../context/QuizContext'; // Add this import
 import { useEffect } from 'react';
-import blegh from '../assets/blegh_crop.jpg'
+import comingSoon from '../assets/guinea.jpg'
 
 
 const HomePage = () => {
@@ -195,13 +195,13 @@ const HomePage = () => {
       <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1 col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-1">
         <div className="h-48 bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center">
           {/* <span className="text-indigo-500 font-medium">Coming Soons</span> */}
-          <img src={blegh} className="max-h-full object-cover"></img>
+          <img src={comingSoon} className="max-h-full object-cover"></img>
         </div>
         <div className="p-5">
           <h3 className="text-lg font-medium mb-1">More Solutions</h3>
           <h4 className="text-md font-medium text-gray-600 mb-2">추가 솔루션</h4>
-          <p className="text-gray-600 text-sm mb-2">We're developing additional targeted supplements for specific health concerns.</p>
-          <p className="text-gray-500 text-xs mb-4">특정 건강 문제를 위한 추가 맞춤형 보조제를 개발 중입니다.</p>
+          <p className="text-gray-600 text-sm mb-2">We recommend these two piggies that can not only relief your stress, but also cure severe insomnia.</p>
+          <p className="text-gray-500 text-xs mb-4">우리는 이 두 마리의 기니피그를 추천합니다. 이들은 스트레스를 해소할 뿐만 아니라 심각한 불면증도 치료할 수 있습니다.</p>
           <a 
             href="#upcoming" 
             className="inline-block py-2 px-4 bg-gray-200 text-gray-700 text-sm font-medium rounded hover:bg-gray-300 transition-colors"

@@ -1,7 +1,8 @@
 const Question = ({ question, selectedAnswer, onAnswer }) => {
   return (
     <div>
-      <h2 className="text-2xl font-semibold mb-6">{question.text}</h2>
+      <h2 className="text-xl font-medium mb-1">{question.text.english}</h2>
+      <h3 className="text-xl text-gray-600 mb-4">{question.text.korean}</h3>
       
       <div className="space-y-4">
         {question.options.map((option) => {
