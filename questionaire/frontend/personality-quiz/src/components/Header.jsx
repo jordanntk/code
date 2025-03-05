@@ -59,6 +59,18 @@ function SideBar({ visible, closeMenu }) {
         
         {/* sidebar navigation links */}
         <nav className="flex flex-col space-y-3 mt-10">
+        <Link 
+    to="/" 
+    className="flex items-center py-3 px-4 text-lg font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200 group"
+    onClick={closeMenu}
+  >
+    <i className='bx bx-home-alt mr-3 text-xl group-hover:translate-x-1 transition-transform'></i>
+    <div className="flex flex-col">
+      <span>Home</span>
+      <span className="text-sm font-normal">홈</span>
+    </div>
+  </Link>
+          
           <Link 
             to="/store" 
             className="flex items-center py-3 px-4 text-lg font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200 group"
