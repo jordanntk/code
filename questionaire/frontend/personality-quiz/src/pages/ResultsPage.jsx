@@ -80,17 +80,33 @@ const ResultsPage = () => {
             {metadata.explanation.korean}
           </p>
         </div>
+        
       </div>
       
       <div className="text-center">
-        <Link 
-          to="/"
-          onClick={resetQuiz}
-          className="inline-block bg-blue-600 text-white py-3 px-8 rounded-lg font-semibold hover:bg-blue-700 transition-colors mb-10"
-        >
-          Take Assessment Again
-        </Link>
-      </div>
+  <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+    <Link 
+      to="/"
+      onClick={(e) => {
+        // Store in sessionStorage that we want to scroll to solutions after navigation
+        sessionStorage.setItem('scrollToSolutions', 'true');
+      }}
+      className="flex flex-col items-center bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-medium py-3 px-8 rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
+    >
+      <span>Get Solutions</span>
+      <span className="text-sm mt-1">솔루션 보기</span>
+    </Link>
+    
+    <Link 
+      to="/"
+      onClick={resetQuiz}
+      className="flex flex-col items-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
+    >
+      <span>Take Assessment Again</span>
+      <span className="text-sm mt-1">다시 평가하기</span>
+    </Link>
+  </div>
+</div>
     </div>
   );
 };

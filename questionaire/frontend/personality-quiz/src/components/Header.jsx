@@ -42,6 +42,7 @@ function SideBar({ closeMenu}){
           <IoIosClose className='cursor-pointer text-6xl' onClick={closeMenu}/>
         </section>
         {/* sidebar content here */}
+        
       </div>
     </div>
   );
